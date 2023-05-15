@@ -53,6 +53,6 @@ jobs:
       - name: Run PHP CodeSniffer
         run: |
           export PATH="$HOME/.composer/vendor/bin:$PATH"
-          phpcs --standard=PSR2 index.php
+          find . -type f -name "*.php" -exec phpcs --standard=PSR2 {} +
           
       
