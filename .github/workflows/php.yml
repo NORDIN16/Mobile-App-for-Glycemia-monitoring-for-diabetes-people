@@ -51,7 +51,7 @@ jobs:
         run: composer global require "squizlabs/php_codesniffer=*"
         
       - name: Run PHP CodeSniffer
-        run: find . -type f -name "*.xml" -exec --standard=/path/to/ruleset.xml .
+        run: find . -type f -name "*.xml" -exec phpcs --standard=/path/to/ruleset.xml .
         
       - name: Run PHP CodeSniffer1
         run: |
