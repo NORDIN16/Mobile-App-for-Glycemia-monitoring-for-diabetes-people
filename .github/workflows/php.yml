@@ -40,6 +40,9 @@ jobs:
           php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
           php composer-setup.php --install-dir=/usr/local/bin --filename=composer
           php -r "unlink('composer-setup.php');"
+      
+      - name: Validate HTML
+        run: npm install -g html-validate@7.17.0
           
       - name: Validate HTML
         run: npx html-validate index.html
