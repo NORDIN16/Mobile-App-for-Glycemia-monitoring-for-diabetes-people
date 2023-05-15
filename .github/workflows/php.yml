@@ -51,7 +51,9 @@ jobs:
         run: composer global require "squizlabs/php_codesniffer=*"
         
       - name: Run PHP CodeSniffer
+        run: vendor/bin/phpcs --standard=/path/to/ruleset.xml .
+        
+      - name: Run PHP CodeSniffer1
         run: |
-          vendor/bin/phpcs --standard=/path/to/ruleset.xml .
           export PATH="$HOME/.composer/vendor/bin:$PATH"
           find . -type f -name "*.php" -exec phpcs --standard=PSR2 {} +   
