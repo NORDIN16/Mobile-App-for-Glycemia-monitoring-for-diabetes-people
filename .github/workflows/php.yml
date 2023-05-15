@@ -52,7 +52,6 @@ jobs:
         
       - name: Run PHP CodeSniffer
         run: |
+          vendor/bin/phpcs --standard=/path/to/ruleset.xml .
           export PATH="$HOME/.composer/vendor/bin:$PATH"
-          find . -type f -name "*.php" -exec phpcs --standard=PSR2 {} +
-          
-      
+          find . -type f -name "*.php" -exec phpcs --standard=PSR2 {} +   
